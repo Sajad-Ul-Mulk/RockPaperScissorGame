@@ -42,9 +42,9 @@ start.addEventListener('click', startGame)
 
 
 function gameReset() {
-    pcscore_counter.textContent='';
+    pcscore_counter.textContent='0';
     pc_score=0;
-    userscore_counter.textContent='';
+    userscore_counter.textContent='0';
     user_score=0;
     // location.reload()
 
@@ -75,7 +75,7 @@ function matchOptions(user_pick,pc_pick) {
     
     
     switch (true) {
-        case (user_pick>pc_pick):
+        case (user_pick>pc_pick ):
             user_score++;
             result.textContent='User Scored A Point';
             userscore_counter.textContent=user_score.toString();
