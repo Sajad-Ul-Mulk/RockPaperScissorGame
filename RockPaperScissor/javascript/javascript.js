@@ -72,28 +72,20 @@ function matchOptions(user_pick,pc_pick) {
     pc_pick=getValueForUserPick(pc_pick.toLowerCase());
 
     console.log(user_pick,pc_pick)
-    
-    
-    switch (true) {
-        case (user_pick>pc_pick ):
-            user_score++;
-            result.textContent='User Scored A Point';
-            userscore_counter.textContent=user_score.toString();
-            checkWinner();
-            break;
-            
-            case (pc_pick>user_pick):
-                pc_score++;
-                result.textContent='PC got A Point';
-                pcscore_counter.textContent=pc_score.toString();
-                checkWinner();
-                break;
 
-        case (pc_pick==user_pick):
-            result.textContent='Its a Tie, Select Again!!';
-
-            break;
+    if (user_pick > pc_pick) {
+        user_score++;
+        result.textContent = 'User Scored A Point';
+        userscore_counter.textContent = user_score.toString();
+        checkWinner();
+    } else if (pc_pick > user_pick) {
+        pc_score++;
+        result.textContent = 'PC got A Point';
+        pcscore_counter.textContent = pc_score.toString();
+        checkWinner();
+    } else if (pc_pick == user_pick) {
+        result.textContent = 'Its a Tie, Select Again!!';
 
     }
-    
+
 }
