@@ -12,6 +12,7 @@ body{
     font-size: large;
     gap: 18px;
     border-radius: 10px;
+    background-color: gold;
 }
 
 select{

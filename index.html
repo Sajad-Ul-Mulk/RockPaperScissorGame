@@ -2,35 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Js Foundation</title>
+    <title>Game</title>
+    <link   rel="stylesheet" href="css/styles.css">
 
 </head>
 <body>
+<div class="header">
+    <h1 >Rock Paper Scissor Game</h1>
+    <p>This is Landing Page for RockPaperScissor Game, Click <strong>Start</strong> to Play....</p>
+</div>
 
-<button class="btn">StartMachine</button>
-<p id="para">
-    This machine is Stopped
-</p>
 
+
+    <select class="SelectUserPick">
+        <option value="1">Rock</option>
+        <option value="2">Paper</option>
+        <option value="3">Scissor</option>
+    </select>
+    <button class="button">Play</button>
+
+
+
+<div class="result_div">
+    <p class="result"></p>
+    <label >USER Score:</label>
+    <span class="user_score">0</span> <br>
+    <label >PC Score:</label>
+    <span class="pc_score">0</span>
+</div>
 </body>
-<script>
-    const button= document.querySelector('.btn')
-    // let button= document.getElementsByClassName('btn')[0]
+<script src="./javascript/javascript.js"></script>
 
-    console.log(button)
-    let p_text= document.querySelector('#para')
-
-    function btn_clicked() {
-        if(p_text.textContent=='This machine is Stopped'){
-            p_text.textContent='This machine is Started'
-            button.textContent='StopMachine'
-        }else{
-            p_text.textContent='This machine is Stopped'
-            button.textContent='StartMachine'
-        }
-    }
-
-    button.addEventListener('click',btn_clicked);
-
-</script>
 </html>
