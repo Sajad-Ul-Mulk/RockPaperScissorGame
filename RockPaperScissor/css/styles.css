@@ -1,0 +1,44 @@
+body{
+    background-color: lightslategray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header{
+    text-align: center;
+    background-color: lightslategray;
+}
+
+.SelectUserPick{
+    font-size: large;
+    gap: 18px;
+    border-radius: 10px;
+}
+
+select{
+    margin-top:20px;
+    margin-left:550px;
+    padding: 0;
+    width:200px;
+    height:30px;
+
+}
+button{
+    color: black;
+    font-weight: bolder;
+    border-radius: 10px;
+    background-color: gold;
+    width:60px;
+    height:35px;
+}
+
+.result_div {
+    margin-top:30px;
+    text-align: center;
+
+}
+.user_score{
+    margin-left: 30px;
+}
+.pc_score{
+    margin-left: 54px;
+}
