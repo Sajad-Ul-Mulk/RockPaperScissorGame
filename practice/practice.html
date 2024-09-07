@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple DOM example</title>
+</head>
+
+<body>
+<section>
+    <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+<!--    <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>-->
+</section>
+</body>
+<script >
+    // const link= document.querySelector('a')
+    // link.textContent='Mozilla Developer Net'
+    //
+    // link.href='https://developer.mozilla.org'
+    const sec= document.querySelector('section')
+    // sec.appendChild(document.createTextNode('--The Premier devolper\'s brower'))
+    const text=document.createTextNode('--The Premier devolper\'s brower')
+
+    // sec.appendChild(text)
+
+    const p= document.createElement('p')
+    p.textContent=text.textContent;
+
+    p.style.backgroundColor='black'
+    p.style.color='white'
+    p.style.width='250px'
+    p.style.height='30px'
+    p.style.paddingLeft='15px'
+    p.style.paddingTop='9px'
+
+    sec.appendChild(p)
+
+    // sec.removeChild(text)        ist Method for removal of nodes
+
+    // text.remove()                2nd Method for removal of nodes
+
+    // text.parentNode.removeChild(text)       // 3rd Method for removal of nodes
+
+
+
+</script>
+</html>

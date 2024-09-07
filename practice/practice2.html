@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+        li {
+            margin-bottom: 10px;
+        }
+
+        li button {
+            font-size: 12px;
+            margin-left: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My shopping list</h1>
+
+<div>
+    <label for="item">Enter a new item:</label>
+    <input type="text" name="item" id="item">
+    <button>Add item</button>
+    <div>
+
+        <br>
+        <label>Enter Your Password</label>
+        <input type="password" id="password">
+        <button id="showpassword">
+            Show Password
+        </button>
+    </div>
+</div>
+
+<ul>
+
+</ul>
+
+<script>
+    const item= document.querySelector('input')
+    const list= document.querySelector('ul')
+    const button= document.querySelector('button')
+
+    function btnClicked(){
+        if(item.value==='') {
+            alert('Please input an Item.')
+            item.focus()
+        return
+        }
+        const newItem=document.createElement('li')
+        const delItem=document.createElement('button')
+        newItem.textContent=item.value
+        delItem.textContent='Delete'
+
+        newItem.appendChild(delItem)
+        list.appendChild(newItem)
+        delItem.addEventListener('click',()=>{
+            newItem.remove()
+        })
+        list.appendChild(delItem)
+
+        item.value=''
+        item.focus()
+        // list.appendChild(`<li>${item.value}</li> `)
+
+    }
+
+    const password=document.createElement('input')
+    password.setAttribute('type','password')
+
+    const passwordfield= document.querySelector('#password')
+    const showPasswordbtn= document.querySelector('#showpassword')
+
+    showPasswordbtn.addEventListener('mousedown',()=>{
+        passwordfield.setAttribute('type','text')
+    })
+    showPasswordbtn.addEventListener('mouseup',(e)=>{
+        passwordfield.setAttribute('type','password')
+        // alert(e.button) to see which button of mouse is pressed i.e re[rented by a number form 0 to 4
+    })
+
+    showPasswordbtn.addEventListener('mouseover',()=>{
+        showPasswordbtn.style.backgroundColor='gray'
+    })
+    showPasswordbtn.addEventListener('mouseout',()=>{
+        showPasswordbtn.style.backgroundColor='white'
+    })
+
+
+
+
+    button.addEventListener("mou",btnClicked)
+</script>
+</body>
+</html>
