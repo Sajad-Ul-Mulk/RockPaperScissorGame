@@ -1,6 +1,7 @@
 body{
     background-color: lightslategray;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    ;
 }
 
 .header{
@@ -42,4 +43,9 @@ button{
 }
 .pc_score{
     margin-left: 54px;
+}
+.option_btns{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
